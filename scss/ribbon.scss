@@ -1,0 +1,79 @@
+.Panel {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    margin: 16px;
+    border: 1px solid #aaa;
+    background: white;
+    border-radius: 16px;
+    
+    /* Important */
+    overflow: visible;
+  }
+  
+  
+  /**
+   * Corner Ribbon Component
+   */
+  .corner-ribbon {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    height: 5.5em;
+    width: 5.5em;
+    padding: 8px;
+    
+    .cr-inner {
+      position: absolute;
+      inset: 0;
+      background: #c50000;
+      color: white;
+      border-radius: 16px 8px 0 8px;
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+    
+    .cr-text {
+      display: block;
+      font-weight: bold;
+      font-size: .8em;
+      line-height: 1.3;
+      transform: rotate(-45deg) translateY(.1em) translateX(-1.8em);
+      
+      strong {
+        display: block;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+    }
+    
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background: #47469B;
+      z-index: -1;
+    }
+    
+    &::before {
+      top: calc(100% - 8px);
+      left: 0;
+      height: 8px;
+      width: 3px;
+      border-radius: 0 0 0 50%;
+    }
+    
+    &::after {
+      left: calc(100% - 8px);
+      top: 0;
+      width: 8px;
+      height: 3px;
+      border-radius: 0 50% 0 0;
+    }
+  }
+  
+  
+  body {
+    text-align: center;
+    font-family: sans-serif;
+  }

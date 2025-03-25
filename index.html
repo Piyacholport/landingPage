@@ -1,0 +1,1620 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AladinXpress</title>
+    <meta name="description" content="Aladin Express" />
+    <meta name="keywords" content="Aladin Express" />
+    <meta name="author" content="Aladin Express" />
+
+    <!-- favicon -->
+    <link href="https://www.aladinxpress.com/images/Aladin-logo-square-copy.png" rel="shortcut icon">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/tobii.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Custom  Css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
+    <link rel="stylesheet" href="./css/ribbon.css">
+
+    <!-- Line -->
+    <meta property="og:title" content="AladinXPress : Comprehensive back-end and logistics management system">
+    <meta property="og:description" content="อะลาดิน ระบบจัดการหลังบ้านและขนส่งครบวงจร ตอบโจทย์ทุกร้านค้าบนโลกออนไลน์">
+    <meta property="og:image" content="https://sv1.picz.in.th/images/2023/03/27/mz7gtt.png">
+    <style>
+        body {
+
+            width: 100%
+        }
+
+        /*fortimner*/
+
+        /* general styling */
+
+        .goldgd {
+            color: #fff;
+            border: none;
+            background: radial-gradient(ellipse farthest-corner at right bottom,
+                    #fedb37 0%,
+                    #fdb931 8%,
+                    #9f7928 30%,
+                    #8a6e2f 40%,
+                    transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top,
+                    #ffffff 0%,
+                    #ffffac 8%,
+                    #d1b464 25%,
+                    #5d4a1f 62.5%,
+                    #5d4a1f 100%);
+        }
+
+        .btnnavbar {
+            width: 100px;
+            border-radius: 8px;
+            margin-left: 15px;
+        }
+
+        .btnnavbar:hover {
+            font-size: 18px;
+
+        }
+
+        .li {
+            text-align: center;
+            display: inline-block;
+            font-size: 0.5rem;
+            list-style-type: none;
+            padding: 1em;
+            text-transform: uppercase;
+            /* background: #000; */
+            background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+            color: #fff;
+            width: 60px;
+            border-radius: 10px;
+
+
+        }
+
+        .li span {
+            display: block;
+            font-size: 2rem;
+        }
+
+        .emoji {
+            display: none;
+            padding: 1rem;
+        }
+
+        .emoji span {
+            font-size: 4rem;
+            padding: 0 .5rem;
+        }
+
+        @media all and (max-width: 768px) {
+
+            .li {
+                font-size: 12px;
+                width: 70px;
+            }
+
+            .li span {
+                font-size: 25px;
+            }
+
+            #btn_xxl {
+                font-size: 28px !important;
+
+            }
+
+            .btn_xxl {
+                margin-top: 40px;
+            }
+
+            .ctcd {
+                text-align: center !important;
+
+            }
+
+            .responsefooterimg {
+                display: none !important;
+            }
+
+            .btnnavbar {
+                margin-left: 8px !important;
+            }
+        }
+
+        /*plx*/
+    </style>
+</head>
+
+<body>
+
+    <!-- START NAVBAR -->
+    <nav id="navbar" class="navbar navbar-expand-lg nav-light fixed-top sticky nav-colour">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="">
+                <span class="logo-light-mode">
+                    <img src="images/logo-light.png" class="l-light" alt="" width="180px">
+                    <img src="images/logo-light.png" class="l-dark" alt="" width="180px">
+                </span>
+                <img src="images/logo-light.png" class="logo-dark-mode" alt="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i data-feather="menu" style="color:#f3c26c ;"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navbar-navlist">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">เกี่ยวกับเรา</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">บริการ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project">โปรโมชั่น</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#price">แพ็คเกจ</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#team">ลูกค้า</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">ติดต่อเรา</a>
+                    </li>
+                </ul>
+
+                <ul class="list-inline menu-social mb-0 ps-lg-4 ms-2">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/AladinXpress.official?mibextid=LQQJ4d">
+                            <span class="login-btn-primary"><span class="btn btn-sm btn-icon btn-pills btn-light"><i
+                                        data-feather="facebook" class="icons"></i></span></span>
+                            <span class="login-btn-light"><span class="btn btn-sm btn-icon btn-pills btn-light"><i
+                                        data-feather="facebook" class="icons"></i></span></span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/aladinxpress.official/">
+                            <span class="login-btn-primary"><span class="btn btn-sm btn-icon btn-pills btn-light"><i
+                                        data-feather="instagram" class="icons"></i></span></span>
+                            <span class="login-btn-light"><span class="btn btn-sm btn-icon btn-pills btn-light"><i
+                                        data-feather="instagram" class="icons"></i></span></span>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+
+                <ul class="list-inline menu-social mb-0 ps-lg-4 ms-2">
+
+
+                    <li class="list-inline-item">
+
+                       <a href="https://app.aladinxpress.com/"></a> <button class="goldgd" id="btn_login "> เข้าสู่ระบบ</button>
+                    </li>
+
+                </ul>
+                <!-- <div class=""><a href="http://app.aladinxpress.com/login"><button class="goldgd p-2 btnnavbar" >เข้าสู่ระบบ</button></a></div> -->
+            </div>
+            <!--end collapse-->
+        </div>
+        <!--end container-->
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- Start About -->
+    <section class="section " id="home" style="margin-top: 50px;  background: rgb(255,255,255);
+    background : linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(236,224,173,1) 100%); ;">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-lg-4 col-md-4 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                    <div class="position-relative carouselExampleIndicators" style="width: 100%; ">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner ">
+                                <div class="carousel-item active rounded-md img-fluid ">
+                                    <iframe style="width: 100%;"
+                                        src="https://www.youtube.com/embed/Lc7vLWQwkOM?autoplay=1&mute=1 "
+                                        allowfullscreen class="rounded-md crsitem  ">
+                                    </iframe>
+                                </div>
+                                <div class="carousel-item">
+                                    <iframe style="width: 100%;"
+                                        src="https://www.youtube.com/embed/uCmnIVK7R6A?autoplay=1&mute=1 "
+                                        allowfullscreen class="rounded-md crsitem">
+                                    </iframe>
+                                </div>
+                                <div class="carousel-item">
+                                    <iframe style="width: 100%;"
+                                        src="https://www.youtube.com/embed/qS9W4UJbJe4?autoplay=1&mute=1 "
+                                        allowfullscreen class="rounded-md crsitem">
+                                    </iframe>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"
+                                style="height: 20px; margin-top: 80%;">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next"
+                                style="height: 20px; margin-top: 80%;">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                    <div class="section-title ms-lg-5">
+                        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner rounded-md">
+                                <div class="carousel-item active">
+                                    <a href="#price"><img class="d-block w-100" src="./images/comingsoon2.jpg"
+                                            alt="First slide"></a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="#price"><img class="d-block w-100" src="./images/bg/2.jpg"
+                                            alt="Second slide"></a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="#price"><img class="d-block w-100" src="./images/bg/3.jpg"
+                                            alt="Third slide"></a>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+
+                        <div class="ctcd" style=" padding-top: 40px; text-align: center; ">
+                            <div class="row ">
+
+                                <div class="col-sm btnsu ">
+                                    <a href="https://app.aladinxpress.com/register" class="btn btn-primary me-2 btn_xxl"
+                                        id="btn_xxl">สมัครสมาชิก</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div>
+    </section>
+    <!-- End About -->
+    <section id="herobanner" class="bg-half-260 pb-lg-0 pb-md-4 bg-primary d-table w-100"
+        style="background: url('images/bg/02banner.jpg');" id="home">
+        <div class="bg-overlay bg-black" style="opacity: 0.4;"></div>
+        <div class="container">
+            <div class="row position-relative z-index-1">
+                <div class="col-lg-7 col-md-6 col-12 mt-lg-5">
+                    <div class="title-heading">
+                        <!-- <h4 class="heading text-white mb-4 position-relative">Providing Brilliant <br> Ideas For Your <br> <span class="position-relative text-type-element" data-period="2000">Business</span></h4> -->
+                        <h4 class="heading text-white mb-4 position-relative">AladinXpress ระบบจัดการและขนส่ง ครบวงจร
+                            <br>ตอบโจทย์ <span class="typewrite position-relative text-type-element" data-period="2000"
+                                data-type='[ "ร้านค้า", "ทุกธุรกิจ", "บนโลกออนไลน์และออฟไลน์"]'></span>
+                        </h4>
+                        <p class="text-white-50 mb-0 para-desc">ใช้งานง่าย จัดการคล่องตัว ตอบโจทย์ธุรกิจ
+                            ขยายฐานลูกค้าได้ง่าย ร่วมเป็นส่วนหนึ่งกับเราวันนี้ ติดต่อเรา</p>
+
+                        <div class="mt-4 pt-2">
+                            <a href="https://app.aladinxpress.com/register" class="btn btn-primary me-2"
+                                id="btn_xxl">สมัครสมาชิก</a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-5 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0  ">
+                    <div class="position-relative  ">
+
+                        <img src="images/newgritandmascot.png" class="rounded-md img-fluid mx-auto d-block " alt="">
+                        <a class=" center bg-white rounded-md shadow-md pt-3 pb-3"
+                            href="https://line.me/ti/p/%40580lkijd"
+                            style="width: 300px; color: grey; margin-top: -60px; font-weight: bold;">ติดต่อฝ่ายขายอะลาดิน
+                            <span><img src="./images/line logo.png" alt="" width="40px"></span></a></b>
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-white">
+            <svg viewBox="0 0 2880 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M720 125L2160 0H2880V250H0V125H720Z" fill="#f8f9fc"></path>
+            </svg>
+        </div>
+    </div>
+
+    <section class="section bg-light" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                    <div class="position-relative">
+                        <img src="images/aladinxflash.jpg" class="rounded-md img-fluid mx-auto d-block" alt="">
+                        <div class="play-icon">
+                            <a href="#!">
+                                <i class="mdi mdi-play text-primary rounded-circle bg-white shadow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-7 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                    <div class="section-title ms-lg-5">
+                        <h6 class="text-primary fw-semibold text-uppercase">เรื่องราว</h6>
+                        <h4 class="title mb-4">เกี่ยวกับ ระบบ AladinXpress</h4>
+                        <p class="text-muted">ระบบช่วยจัดการออเดอร์ อะลาดิน พัฒนาขึ้นเพื่อตอบสนองโจทย์ธุรกิจ
+                            ที่แข่งขันกันสูง โดยเฉพาะการขายสินค้าออนไลน์ ที่ต้องข้องเกี่ยวกับการจัดการงานสั่งซื้อ
+                            การจัดส่ง รวมถึงรายงานที่สำคัญ เพื่อให้ง่ายต่อการจัดการ ระบบอะลาดิน
+                            ได้ตอบโจทย์ของคุณเหล่านี้ทั้งหมด เราจะทำให้ออเดอร์ไม่หล่นหาย มองเห็นกำไรชัดเจน
+                            หรือแม้กระทั่งเบาแรงในการจัดส่ง รวมถึงราคาส่งสินค้าที่ถูก ทำให้ประหยัดต้นทุน เพิ่มกำไร</p>
+
+                        <p class="text-muted">เราพร้อมให้บริการคุณแล้ววันนี้ </p>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div>
+    </section>
+    <!-- Start Services -->
+    <section class="section" id="service">
+        <div class="container">
+            <div class="row align-items-center mb-4 pb-2">
+                <div class="col-md-6">
+                    <div class="section-title text-md-start">
+                        <h6 class="text-primary fw-semibold text-uppercase">ตัวช่วยจัดการงานขายของคุณ</h6>
+                        <h4 class="title mb-3 mb-md-0">Aladin Express Platform <br>ครบจบที่เดียว</h4>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-md-6">
+                    <p class="text-muted mb-0 para-desc">พบฟีเจอร์ที่สำคัญ และการอัพเดทใหม่ๆได้ที่ระบบอะลาดิน
+                        หรือติดต่อฝ่ายขายเพื่อสมัครใช้บริการ และสอบถามข้อมูล</p>
+                </div><!--end col-->
+            </div><!--end row-->
+
+            <div class="row" style="color: black !important;">
+                <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                    <div class="card border-0 features feature-primary feature-clean rounded-lg p-4">
+                        <div class="icons bg-lg text-center">
+                            <i class="uil uil-truck d-block rounded-md h3 mb-0"></i>
+                        </div>
+
+                        <div class="content mt-3 pt-2" style="height: 240px;">
+                            <a href="" class="title  h5">ค่าส่งถูกที่สุด เริ่มต้นไม่มีขั้นต่ำ ชิ้นละ 16 บาท
+                            </a>
+                            <p class="text-muted mt-3">ไม่ว่าสินค้าของคุณจะมีกี่ชิ้น คุณก็สามารถส่งของได้ในราคาเพียง 16
+                                บาทตั้งแต่ชิ้นแรก</p>
+
+                            <div class="mt-4 pt-4">
+                                <a href="#price" class="btn btn-link primary">สมัครใช้บริการ <i
+                                        class="uil uil-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                    <div class="card border-0 features feature-primary feature-clean rounded-lg p-4">
+                        <div class="icons bg-lg text-center">
+                            <i class="uil-bolt-alt d-block rounded-md h3 mb-0"></i>
+                        </div>
+
+                        <div class="content mt-3 pt-2" style="height: 240px;">
+                            <a href="" class="title  h5">COD เพียง 2% เงินเข้าภายใน 1 วัน</a>
+                            <p class="text-muted mt-3">หมดปัญหาเรื่อง COD เข้าช้า เพราะ AladinXpress
+                                สามารถช่วยให้คุณได้รับเงินเร็วขึ้นได้ </p>
+                            <span style="font-size: 12px; color: #666;">*หลังจากออเดอร์สำเร็จ </span>
+
+                            <div class="mt-2 pt-2">
+                                <a href="#price" class="btn btn-link primary">สมัครใช้บริการ <i
+                                        class="uil uil-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                    <div class="card border-0 features feature-primary feature-clean rounded-lg p-4">
+                        <div class="icons bg-lg text-center">
+                            <i class="uil uil-file-check-alt d-block rounded-md h3 mb-0"></i>
+                        </div>
+                        <div class="content mt-3 pt-2" style="height: 240px;">
+                            <a href="" class="title h5">จัดการออเดอร์</a>
+                            <p class="text-muted mt-3">สร้าง แก้ไข จัดการรายการออเดอร์จากช่องทางยอดนิยม ทุกช่องทาง</p>
+
+                            <div class="mt-4 pt-5">
+                                <a href="#price" class="btn btn-link primary">สมัครใช้บริการ <i
+                                        class="uil uil-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                    <div class="card border-0 features feature-primary feature-clean rounded-lg p-4">
+                        <div class="icons bg-lg text-center">
+                            <i class="uil uil-shop d-block rounded-md h3 mb-0"></i>
+                        </div>
+
+                        <div class="content mt-4 pt-2" style="height: 240px;">
+                            <a href="" class="title text-dark h5">จัดการร้านของคุณ</a>
+                            <p class="text-muted mt-3">เระบบสร้างร้าน แยกยอดขาย แยกต้นทุน แยกออเดอร์
+                                ทำให้การจัดการร้านเป็นเรื่องที่ง่ายขึ้น พร้อมสรุปสิ่งที่คุณควรรู้ในเชิงการตลาด
+                            </p>
+
+                            <div class="mt-4 pt-2">
+                                <a href="#price" class="btn btn-link primary">สมัครใช้บริการ <i
+                                        class="uil uil-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                    <div class="card border-0 features feature-primary feature-clean rounded-lg active p-4">
+                        <div class="icons bg-lg text-center">
+                            <i class="uil uil-monitor d-block rounded-md h3 mb-0"></i>
+                        </div>
+                        <div class="content mt-4 pt-2" style="height: 240px;">
+                            <a href="" class="title  h5">ช่องทางขายหลายช่องทาง</a>
+                            <p class="text-muted mt-3">เรามีการเชื่อมต่อช่องทางการขาย เช่น Facebook, Tiktok Shop,
+                                LAzada, Shopee เพรียบพร้อม
+
+                            </p>
+
+                            <div class="mt-4 pt-2">
+                                <a href="#price" class="btn btn-link primary">สมัครใช้บริการ<i
+                                        class="uil uil-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                    <div class="card border-0 features feature-primary feature-clean rounded-lg p-4">
+                        <div class="icons bg-lg text-center">
+                            <i class="uil-server d-block rounded-md h3 mb-0"></i>
+                        </div>
+
+                        <div class="content mt-4 pt-2" style="height: 240px;">
+                            <a href="" class="title  h5">เซิร์ฟเวอร์ระดับโลก เสถียร เร็ว แรง
+                            </a>
+                            <p class="text-muted mt-3">ด้วยเซิร์ฟเวอร์รวดเร็ว ปลอดภัย เสถียร พร้อมทีมงานดูแลระบบเฉพาะทาง
+                                ทำให้คุณอุ่นใจว่าธุรกิจของคุณจะราบรื่นผ่านระบบเรา
+                            </p>
+
+                            <div class="mt-4 pt-2">
+                                <a href="#price" class="btn btn-link primary">สมัครใช้บริการ <i
+                                        class="uil uil-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                    <div class="card border-0 features feature-primary feature-clean rounded-lg active p-4">
+                        <div class="icons bg-lg text-center">
+                            <i class="uil-file-alt d-block rounded-md h3 mb-0"></i>
+                        </div>
+
+                        <div class="content mt-4 pt-2" style="height: 240px;">
+                            <a href="" class="title  h5">รายงานที่สำคัญ
+                                เพื่อให้ธุรกิจของคุณดำเนินไปอย่างมีประสิทธิภาพ</a>
+                            <p class="text-muted mt-3">ไม่พลาดทุกโอกาสที่สำคัญทางธุรกิจ ด้วยรายงานสรุปแบบ Real Time
+                                หรือสรุปรวบรวม กำไร การลดต้นทุน พฤติกรรมลูกค้า ทำให้คุณวางแผนได้ง่ายขึ้น
+                            </p>
+
+                            <div class="mt-4 pt-2">
+                                <a href="#price" class="btn btn-link primary">สมัครใช้บริการ <i
+                                        class="uil uil-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                    <div class="card border-0 features feature-primary feature-clean rounded-lg p-4">
+                        <div class="icons bg-lg text-center">
+                            <i class="uil-coins d-block rounded-md h3 mb-0"></i>
+                        </div>
+
+                        <div class="content mt-4 pt-2" style="height: 240px;">
+                            <a href="" class="title  h5">จัดการการส่งของให้ง่าย และถูกที่สุด</a>
+                            <p class="text-muted mt-3">ระบบมาพร้อมค่าจัดส่งที่ถูกที่สุด
+                                ช่วยให้คุณจัดการสินค้าและจัดส่งผ่านระบบของเรา เพียงคีย์ข้อมูล เรียกรถมารับ รอรับยอด
+                            </p>
+
+                            <div class="mt-4 pt-2">
+                                <a href="#price" class="btn btn-link primary">สมัครใช้บริการ <i
+                                        class="uil uil-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+                    <div class="card border-0 features feature-primary feature-clean rounded-lg active p-4">
+                        <div class="icons bg-lg text-center">
+                            <i class="uil-clock-nine d-block rounded-md h3 mb-0"></i>
+                        </div>
+
+                        <div class="content mt-4 pt-2" style="height: 240px;">
+                            <a href="" class="title text-dark h5">ทีมดูแล 24 ชั่วโมง</a>
+                            <p class="text-muted mt-3">ติดปัญหาใดๆ เรามีทีมงานพร้อมดูแลคุณตลอด 24 ชั่วโมง
+                            </p>
+
+                            <div class="mt-5 pt-2">
+                                <a href="#price" class="btn btn-link primary">สมัครใช้บริการ <i
+                                        class="uil uil-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+        <div style="position: relative; margin:0 auto; margin-top: 80px;">
+            <img src="images/aladin.jpg" style="width:100%;">
+        </div>
+        <div class="container mt-100 mt-60">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="section-title text-center mb-4 pb-2">
+                        <h6 class="text-primary fw-semibold text-uppercase">เหตุผลที่เราตอบโจทย์ของคุณ</h6>
+
+                        <h4 class="title mb-3">หมดปัญหากวนใจเหล่านี้</h4>
+                        <p class="text-muted mx-auto para-desc mb-0">ให้เราจัดการ ดูแล ติดตาม รายงานธุรกิจงานขาย
+                            งานออเดอร์ของคุณ ครบจบในที่เดียว</p>
+
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+
+            <div class="row">
+                <div class="col-12 mt-4 pt-2">
+                    <div class="timeline-page position-relative">
+                        <div class="timeline-item">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="duration date-label-left position-relative text-md-end">
+                                        <img src="images/3.jpg" class="avatar avatar-250" alt="">
+                                    </div>
+                                </div><!--end col-->
+                                <div class="col-lg-6 col-md-6 col-sm-6 mt-4 mt-sm-0">
+                                    <div class="event event-description-right float-left text-start">
+                                        <h5 class="title mb-1 text-capitalize">ปัญหาค่า COD เข้าช้า</h5>
+                                        <p class="timeline-subtitle mt-3 mb-0 text-muted">หมดปัญหาเงินเข้าช้า
+                                            ทำให้ธุรกิจหมุนไม่ทัน ในอะลาดินเราชำระวันต่อวัน
+                                        </p>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </div><!--end timeline item-->
+
+                        <div class="timeline-item mt-5 pt-4">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-1 order-2 mt-4 mt-sm-0">
+                                    <div class="event event-description-left float-left text-end">
+                                        <h4 class="title mb-1 text-capitalize">ออเดอร์หาย ติดตามยาก</h4>
+                                        <p class="timeline-subtitle mt-3 mb-0 text-muted">ด้วยระบบจัดการที่รวบรวม
+                                            จัดเก็บ เรียกใช้งานได้ง่าย ทุกอย่างเก็บเป็นระบบตามประเภทการใช้งาน
+                                            คุณสามารถเรียกข้อมูลมาเช็คแบบสดๆ พร้อมกับระบบที่ทำงานได้อย่างรวดเร็ว
+                                            ทำให้คุณไม่พลาดทุกการติดตาม</p>
+                                    </div>
+                                </div><!--end col-->
+                                <div class="col-lg-6 col-md-6 col-sm-6 order-sm-2 order-1">
+                                    <div class="duration duration-right position-relative">
+                                        <img src="images/c3.jpg" class="avatar avatar-250" alt="">
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </div><!--end timeline item-->
+
+                        <div class="timeline-item mt-5 pt-4">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 mt-4 mt-sm-0">
+                                    <div class="duration date-label-left position-relative text-md-end">
+                                        <img src="images/c2.jpg" class="avatar avatar-250" alt="">
+                                    </div>
+                                </div><!--end col-->
+                                <div class="col-lg-6 col-md-6 col-sm-6 mt-4 mt-sm-0">
+                                    <div class="event event-description-right float-left text-start">
+                                        <h4 class="title mb-1 text-capitalize">ขาดทุน ไม่เห็นกำไร</h4>
+                                        <p class="timeline-subtitle mt-3 mb-0 text-muted">
+                                            ด้วยค่าส่งสินค้าที่ถูกที่สุด
+                                            ทำให้คุณมีกำไรมากขึ้น รวมถึงระบบที่บอกต้นทุนและกำไร
+                                            โดยแยกค่าใช้จ่ายออกอย่างละเอียด ทำให้คุณวางแผนการเงินได้ง่ายขึ้น</p>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </div><!--end timeline item-->
+
+                    </div><!--end timeline page-->
+                    <!-- TIMELINE END -->
+                </div><!--end col-->
+                <img src="images/genie.png" style="max-width: 200px; display: block; margin:0 auto;">
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+
+    <!-- Project Start -->
+    <section class="section bg-light" id="project">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="section-title text-center mb-4 pb-2">
+
+                        <h4 class="title mb-3">อะลาดินพร้อมให้บริการคุณแล้ววันนี้</h4>
+
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+
+            <div class="row">
+
+
+                <div class="col-lg-4   mt-4 pt-2">
+                    <div
+                        class="card border-0 project project-primary position-relative d-block overflow-hidden rounded">
+                        <div class="card-body p-0">
+                            <img src="images/portfolio/02.jpg" class="img-fluid" alt="work-image">
+                            <!-- <div class="overlay-work bg-dark"></div> -->
+
+
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-4   mt-4 pt-2">
+                    <div
+                        class="card border-0 project project-primary position-relative d-block overflow-hidden rounded">
+                        <div class="card-body p-0">
+                            <img src="images/portfolio/new03.jpg" class="img-fluid" alt="work-image">
+                            <!-- <div class="overlay-work bg-dark"></div> -->
+
+
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+                <div class="col-lg-4   mt-4 pt-2">
+                    <div
+                        class="card border-0 project project-primary position-relative d-block overflow-hidden rounded">
+                        <div class="card-body p-0">
+                            <img src="images/portfolio/new04.jpg" class="img-fluid" alt="work-image">
+                            <!-- <div class="overlay-work bg-dark"></div> -->
+
+
+                        </div>
+                    </div>
+                </div><!--end col-->
+
+
+
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- Project End -->
+
+    <!-- CTA Start -->
+    <section class="section"
+        style="background: url('images/S__43991071_2.jpg') center ;   background-repeat: no-repeat;">
+        <div class="bg-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="section-title text-center">
+                        <h4 class="title text-white mb-3" style="color:#FFF!important;">เริ่มต้นใช้งาน ติดต่อหาเราที่นี่
+                        </h4>
+                        <p class="text-white-50 mx-auto para-desc mb-0">เริ่มพูดคุยกับเรา เจ้าหน้าที่รับฟังและแนะนำคุณ
+                            ด้วยข้อมูลที่ครบถ้วน และเข้าใจคนทำธุรกิจที่สุด</p>
+
+                        <div class="mt-4 pt-2">
+                            <a href="https://line.me/ti/p/%40580lkijd" class="btn btn-primary"
+                                id="btn_xxl">ติดต่อเรา</a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+
+    </section><!--end section-->
+    <!-- CTA End -->
+
+    <!-- start package -->
+    <div class="package " id="price" style="background: rgb(255,255,255);
+ background : linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(236,224,173,1) 100%);">
+
+
+        <div class="section-title text-center mb-4 pb-2 ">
+            <br><br>
+            <h6 class="text-primary fw-semibold text-uppercase">เลือกรูปแบบที่ต้องการ</h6>
+            <h4 class="title">แพ็คเกจ</h4>
+
+        </div>
+
+
+        <div style="width: 90%; margin: auto;">
+            <div class="row">
+                <div class="col-lg ">
+
+                    <div class=" pt-2 ">
+
+                        <div class="card pricing price-primary px-4 py-4 rounded shadow bg-white ">
+                            <h5 class="text-uppercase ">Free</h5>
+
+                            <div class="">
+                                <span class="h5 mb-0 mt-2">฿</span>
+                                <span class="price h4 mb-0">Free</span> <br>
+                                <span class="h5 mb-0 mt-2">฿</span>
+                                <span class="price h1 mb-0">0</span>
+                                <span class="h5 align-self-end mb-1">/เดือน</span>
+                            </div>
+
+                            <ul class="list-unstyled mb-0 ps-0" style="color: black ;">
+                                <li class=" mb-2 text-danger " style="font-weight: bold;"><span
+                                        class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle text-danger"></i></span>ค่าส่ง 18฿
+                                </li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>ฟรีใช้ได้ตลอดชีพ</li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>จำกัดฟังก์ชัน
+                                    ล็อกจำนวนออเดอร์</li>
+
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>1 ร้าน 1 คลัง</li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>300 ออเดอร์</li>
+
+                            </ul>
+                            <button type="button" class="collapsible">อ่านต่อ <i
+                                    class="uil-angle-double-down align-middle text-danger"></i></button>
+
+
+                            <div class="content2">
+
+                                <ul class="list-unstyled mb-0 ps-0" style="color: black ;">
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>จำนวนแอดมิน 1 คน
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการการจัดส่ง
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการรายชื่อลูกค้า
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>จัดการระบบรายการสินค้า
+                                        พร้อมคุณสมบัติสินค้า</li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบสต๊อกสินค้า
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>รายงาน</li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>นำเข้า/ส่งออกข้อมูลสินค้า
+                                    </li>
+                                </ul>
+                            </div>
+                            <br>
+                            <a href="https://line.me/ti/p/%40580lkijd" id="package-free" class="btn">สมัครแพ็คเกจนี้</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg ">
+                    <div class=" pt-2">
+                        <div class="card pricing price-primary px-4 py-4 rounded shadow bg-white">
+                            <h5 class="text-uppercase">S</h5>
+
+                            <div class="">
+                                <span class="h5 mb-0 mt-2">฿</span>
+                                <span class="price h4 mb-0"
+                                    style=" text-decoration: line-through; color: #666;text-decoration-color: #c50000;">899</span>
+                                <br>
+                                <span class="h5 mb-0 mt-2">฿</span>
+                                <span class="price h1 mb-0">719</span>
+                                <span class="h5 align-self-end mb-1">/เดือน</span>
+                            </div>
+
+                            <ul class="list-unstyled mb-0 ps-0" style="color: black ;">
+                                <li class=" mb-2 text-danger " style="font-weight: bold;"><span
+                                        class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle text-danger"></i></span>ค่าส่ง 16฿
+                                </li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>รายการออเดอร์ : 1500
+                                    <br>
+                                    ออเดอร์
+                                </li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>2 ร้าน 2 คลังสินค้า
+                                </li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>ไม่จำกัดสินค้า</li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>จำนวนแอดมิน 2 คน</li>
+
+                            </ul>
+                            <button type="button" class="collapsible ">อ่านต่อ <i
+                                    class="uil-angle-double-down align-middle text-danger"></i></button>
+
+
+                            <div class="content2">
+
+                                <ul class="list-unstyled mb-0 ps-0" style="color: black ;">
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการการออเดอร์
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการการจัดส่ง
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการรายชื่อลูกค้า
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>จัดการระบบรายการสินค้า
+                                        พร้อมคุณสมบัติสินค้า</li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบสต๊อกสินค้า
+                                        -รายงาน
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>นำเข้า/ส่งออกข้อมูลสินค้า
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="https://line.me/ti/p/%40580lkijd" id="package-s"
+                                class="btn mt-4 btn-danger">สมัครแพ็คเกจนี้</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg ">
+                    <div class=" pt-2">
+                        <div class="card pricing price-primary px-4 py-4 rounded shadow  cardribbon"
+                            style="border:2px solid #c50000; background-color: #ffd0cc;">
+                            <div class="bodyribbon">
+                                <div class="ribbon ribbon-top-right"><span>แนะนำแพ็คเกจขายดี</span></div>
+                            </div>
+
+                            <h5 class="text-uppercase ">M</h5>
+
+                            <div class="">
+                                <span class="h5 mb-0 mt-2">฿</span>
+                                <span class="price h4 mb-0"
+                                    style=" text-decoration: line-through; color: #666;text-decoration-color: #c50000; ">2,499</span>
+                                <br>
+                                <span class="h5 mb-0 mt-2">฿</span>
+                                <span class="price h1 mb-0">1,999 </span>
+                                <span class="h5 align-self-end mb-1">/เดือน</span>
+                            </div>
+
+                            <ul class="list-unstyled mb-0 ps-0" style="color: black ;">
+                                <li class=" mb-2 text-danger" style="font-weight: bold;"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>ค่าส่ง 16฿</li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>รายการออเดอร์ : 5000
+                                    <br>
+                                    ออเดอร์
+                                </li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>5 ร้าน 5 คลังสินค้า
+                                </li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>ไม่จำกัดสินค้า</li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>จำนวนแอดมิน 5 คน</li>
+
+                            </ul>
+                            <button type="button" class="collapsible " style="background-color: #ffd0cc;">อ่านต่อ <i
+                                    class="uil-angle-double-down align-middle text-danger "></i></button>
+
+
+                            <div class="content2">
+
+                                <ul class="list-unstyled mb-0 ps-0" style="color: black ;">
+
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการการจัดส่ง
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการรายชื่อลูกค้า
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>จัดการระบบรายการสินค้า
+                                        พร้อมคุณสมบัติสินค้า</li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบสต๊อกสินค้า
+                                        -รายงาน
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>นำเข้า/ส่งออกข้อมูลสินค้า
+                                    </li>
+
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบ Facebook Live
+                                        ดูด CF
+                                    </li>
+
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>เชื่อมต่อ TikTok
+                                        Shop, Shopee, Lazada
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="https://app.aladinxpress.com/register" id="package-m" class="btn  mt-4"
+                                style="background:#c50000!important; color: #FFF!important;">สมัครแพ็คเกจนี้</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg ">
+                    <div class=" pt-2">
+                        <div class="card pricing price-primary px-4 py-4 rounded shadow bg-white">
+                            <h5 class="text-uppercase">L</h5>
+
+                            <div class="">
+                                <span class="h5 mb-0 mt-2">฿</span>
+                                <span class="price h4 mb-0"
+                                    style=" text-decoration: line-through; color: #666;text-decoration-color: #c50000;">3,999</span>
+                                <br>
+                                <span class="h5 mb-0 mt-2">฿</span>
+                                <span class="price h1 mb-0">3,199</span>
+                                <span class="h5 align-self-end mb-1">/เดือน</span>
+                            </div>
+
+                            <ul class="list-unstyled mb-0 ps-0 " style="color: black ;">
+                                <li class=" mb-2 text-danger " style="font-weight: bold;"><span
+                                        class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>ค่าส่ง 16฿</li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>รายการออเดอร์ : 50,000
+                                    <br>
+                                    ออเดอร์
+                                </li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>20 ร้าน 20 คลังสินค้า
+                                </li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>ไม่จำกัดสินค้า</li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>จำนวนแอดมิน 10 คน</li>
+
+                            </ul>
+                            <button type="button" class="collapsible">อ่านต่อ <i
+                                    class="uil-angle-double-down align-middle text-danger"></i></button>
+
+
+                            <div class="content2">
+
+                                <ul class="list-unstyled mb-0 ps-0" style="color: black ;">
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการการออเดอร์
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการการจัดส่ง
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการรายชื่อลูกค้า
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>จัดการระบบรายการสินค้า
+                                        พร้อมคุณสมบัติสินค้า</li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบสต๊อกสินค้า
+                                        -รายงาน
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>นำเข้า/ส่งออกข้อมูลสินค้า
+                                    </li>
+
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบ Facebook Live
+                                        ดูด CF
+                                    </li>
+
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>เชื่อมต่อ TikTok
+                                        Shop, Shopee, Lazada
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="https://app.aladinxpress.com/register" id="package-l"
+                                class="btn  mt-4">สมัครแพ็คเกจนี้</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg ">
+                    <div class="pt-2">
+                        <div class="card pricing price-primary px-4 py-4 rounded shadow bg-white">
+                            <h5 class="text-uppercase">XL</h5>
+
+                            <div class="">
+                                <span class="h5 mb-0 mt-2">฿</span>
+                                <span class="price h4 mb-0"
+                                    style=" text-decoration: line-through; color: #666;text-decoration-color: #c50000;">5,999</span>
+                                <br>
+                                <span class="h5 mb-0 mt-2">฿</span>
+                                <span class="price h1 mb-0">4,799</span>
+                                <span class="h5 align-self-end mb-1">/เดือน</span>
+                            </div>
+
+                            <ul class="list-unstyled mb-0 ps-0" style="color: black ;">
+                                <li class=" mb-2 text-danger " style="font-weight: bold;"><span
+                                        class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>ค่าส่ง 16฿</li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>รายการออเดอร์ : 100,000
+                                    <br>
+                                    ออเดอร์
+                                </li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>ไม่จำกัดสินค้า</li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>ไม่จำกัดแอดมิน</li>
+                                <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                            class="uil uil-check-circle align-middle"></i></span>ระบบจัดการการออเดอร์
+                                </li>
+                            </ul>
+
+                            <button type="button" class="collapsible ">อ่านต่อ <i
+                                    class="uil-angle-double-down align-middle text-danger"></i></button>
+
+
+                            <div class="content2">
+
+                                <ul class="list-unstyled mb-0 ps-0" style="color: black ;">
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการการออเดอร์
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการการจัดส่ง
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบจัดการรายชื่อลูกค้า
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>จัดการระบบรายการสินค้า
+                                        พร้อมคุณสมบัติสินค้า</li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบสต๊อกสินค้า
+                                        -รายงาน
+                                    </li>
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>นำเข้า/ส่งออกข้อมูลสินค้า
+                                    </li>
+
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>ระบบ Facebook Live
+                                        ดูด CF
+                                    </li>
+
+                                    <li class=" mb-2"><span class="icon fs-5 me-2"><i
+                                                class="uil uil-check-circle align-middle"></i></span>เชื่อมต่อ TikTok
+                                        Shop, Shopee, Lazada
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="https://app.aladinxpress.com/register" id="package-xl"
+                                class="btn mt-4">สมัครแพ็คเกจนี้</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+    <!-- end package -->
+    <!-- Start Contact -->
+    <section class=" bg-white" id="contact" style="margin-bottom: 0px !important; padding-top: 100px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <div class="section-title text-center mb-4 pb-2">
+                        <h6 class="text-primary fw-semibold text-uppercase">Get in touch</h6>
+                        <h4 class="title">ติดต่อเรา</h4>
+                        <div class="mt-4 pt-2">
+                            <a href="https://line.me/ti/p/%40580lkijd" class="btn btn-primary"
+                                id="btn_xxl">ติดต่อเรา</a>
+                        </div>
+                    </div>
+                </div><!--end col-->
+            </div><!--end row-->
+            <div class="row">
+
+                <!-- socail start -->
+                <div class=" col-md-6">
+
+                    <!-- <div class="col-lg-5 col-md-6 col-12 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                       
+                    </div>end col -->
+
+                    <div class="row " style="font-size: 18px;">
+                        <!-- <div id="fillform" class="  my-4 p-5 ms-lg-4">
+                            <img src="images/hero/hero.png" class="rounded-md img-fluid mx-auto d-block" alt="">
+                       
+                        </div> -->
+                        <div class="col-md-6 ">
+                            <div class="mb-4 ">
+                                <div class="d-flex mt-4">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil uil-map-marker d-block rounded h2 -mt-1 mb-0"></i>
+                                    </div>
+
+                                    <div class="flex-1 ms-3">
+                                        <h4 class="mb-2">Website</h4>
+                                        <p class="text-muted mb-2">AladinXpress.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <div class="d-flex mt-3">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil uil-line d-block rounded h2 -mt-1 mb-0"
+                                            style="color: #00b900; "></i>
+                                    </div>
+
+                                    <div class="flex-1 ms-3">
+                                        <h4 class="mb-2">Line</h4>
+                                        <a href="https://line.me/ti/p/%40580lkijd" class="link_social">@AladinXpress</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end col-->
+                        <div class="col-md-6">
+                            <div class="mb-4 ">
+                                <div class="d-flex mt-3">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil uil-facebook d-block rounded h2 -mt-1 mb-0"
+                                            style="color: #1877F2; "></i>
+                                    </div>
+
+                                    <div class="flex-1 ms-3">
+                                        <h4 class="mb-2">Facebook</h4>
+                                        <p class="text-muted mb-2"><a
+                                                href="https://www.Facebook.com/AladinXpress.official"
+                                                class="link_social">​AladinXpress</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <div class="d-flex mt-3">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil uil-twitter-alt d-block rounded h2 -mt-1 mb-0"
+                                            style="color: #1DA1F2; "></i>
+                                    </div>
+
+                                    <div class="flex-1 ms-3">
+                                        <h4 class="mb-2">Twitter</h4>
+                                        <p class="text-muted mb-2"><a href="https://www.Twitter.com/AladinXpress"
+                                                class="link_social">​AladinXpress</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end col-->
+                        <div class="col-md-6">
+                            <div class="mb-4 ">
+                                <div class="d-flex mt-3">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil-envelope-alt d-block rounded h2 -mt-1 mb-0"
+                                            style="color: #DF2029 ; "></i>
+                                    </div>
+
+                                    <div class="flex-1 ms-3">
+                                        <h4 class="mb-2">Email</h4>
+                                        <p class="text-muted mb-2 ">contact@AladinXpress.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <div class="d-flex mt-3">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil-tumblr-alt d-block rounded h2 -mt-1  mb-0"
+                                            style="color: #000000; "></i>
+                                    </div>
+
+                                    <div class="flex-1 ms-3">
+                                        <h4 class="mb-2">Tiktok</h4>
+                                        <p class="text-muted mb-2"><a href="https://www.tiktok.com/@aladinxpress"
+                                                class="link_social">​AladinXpress</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end col-->
+                        <div class="col-md-6">
+                            <div class="mb-4 ">
+                                <div class="d-flex mt-3">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil-instagram d-block rounded h2 -mt-1 mb-0"
+                                            style="color: #E4405F; "></i>
+                                    </div>
+
+                                    <div class="flex-1 ms-3">
+                                        <h4 class="mb-2">instagram</h4>
+                                        <p class="text-muted mb-2"><a
+                                                href="https://www.instagram.com/aladinxpress.official/"
+                                                class="link_social">​AladinXpress</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <div class="d-flex mt-3">
+                                    <div class="icons text-center mx-auto">
+                                        <i class="uil-youtube d-block rounded h2 -mt-1 mb-0"
+                                            style="color: #CD201F; "></i>
+                                    </div>
+
+                                    <div class="flex-1 ms-3">
+                                        <h4 class="mb-2">YouTube</h4>
+                                        <p class="text-muted mb-2"><a href="https://www.youtube.com/@aladinxpress"
+                                                class="link_social">​AladinXpress</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end col-->
+
+                    </div>
+                    <!--end col-->
+                </div><!--end row-->
+                <div class="col-lg-6 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0  ">
+                    <!-- <div class="position-relative bg-white rounded-md shadow"> -->
+                    <img src="images/ADS1.png" class="mx-auto d-block bg-white responsefooterimg" alt="" width="900px"
+                        id="responsefooterimg">
+
+                    <!-- <br> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div><!--end container-->
+    </section><!--end section-->
+    <!-- End Contact -->
+
+    <!-- Start Footer -->
+    <footer class="bg-footer footer-bar" style="margin-top: 0;">
+        <div class="footer-py-30">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-sm-3">
+                        <div class="text-sm-start">
+                            <a href="#" class="logo-footer">
+                                <img src="images/logo-light.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        <div class="text-center">
+                            <p class="mb-0">©
+                                <script>document.write(new Date().getFullYear())</script> AladinXpress.com by Aladin
+                                Express (Thailand) Company Limited.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        <ul class="list-unstyled social-icon foot-social-icon text-sm-end mb-0">
+                            <li class="list-inline-item mb-0"><a
+                                    href="https://www.facebook.com/AladinXpress.official?mibextid=LQQJ4d"
+                                    class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-facebook fea icon-sm fea-social">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
+                                        </path>
+                                    </svg></a></li>
+                            <li class="list-inline-item mb-0"><a href="https://www.instagram.com/aladinxpress.official/"
+                                    class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-instagram fea icon-sm fea-social">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg></a></li>
+                            <li class="list-inline-item mb-0"><a
+                                    href="https://twitter.com/aladinxpress?s=21&t=WxBeo9ViO7UIYq1cYv8fHg"
+                                    class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-twitter fea icon-sm fea-social">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                        </path>
+                                    </svg></a></li>
+
+                            <li class="list-inline-item mb-0"><a
+                                    href="https://twitter.com/aladinxpress?s=21&t=WxBeo9ViO7UIYq1cYv8fHg"
+                                    class="rounded"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-twitter fea icon-sm fea-social">
+                                        <path fill="currentColor"
+                                            d="m14.792 10.775l-3.668-2.112A1.417 1.417 0 0 0 9 9.89v4.222c-.003.506.267.974.706 1.224a1.41 1.41 0 0 0 1.419.002l3.667-2.112a1.413 1.413 0 0 0 0-2.45zm-.5 1.582l-3.666 2.113a.414.414 0 0 1-.419 0a.408.408 0 0 1-.207-.36V9.89a.408.408 0 0 1 .207-.359a.402.402 0 0 1 .418 0l3.667 2.113a.41.41 0 0 1 0 .714zM19 4H5a3.003 3.003 0 0 0-3 3v10a3.003 3.003 0 0 0 3 3h14a3.003 3.003 0 0 0 3-3V7a3.003 3.003 0 0 0-3-3zm2 13a2.003 2.003 0 0 1-2 2H5a2.003 2.003 0 0 1-2-2V7a2.003 2.003 0 0 1 2-2h14a2.003 2.003 0 0 1 2 2v10z" />
+                                    </svg></a></li>
+
+                        </ul><!--end icon-->
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </div>
+    </footer><!--end footer-->
+    <!-- End Footer -->
+
+    <!-- Back to top -->
+    <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded-pill fs-5"><i
+            data-feather="arrow-up" class="fea icon-sm icons align-middle"></i></a>
+    <!-- Back to top -->
+
+    <!-- JAVASCRIPTS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/gumshoe.js"></script>
+    <script src="js/tobii.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/feather.min.js"></script>
+    <!-- Custom -->
+    <script src="js/plugins.init.js"></script>
+    <script src="js/app.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- forcounttime -->
+    <script>
+        var countDownDate = new Date("2023-05-02 09:39:00")
+        var myfunc = setInterval(function () {
+            // code goes here
+        }, 1000)
+        var now = new Date().getTime();
+        var timeleft = countDownDate - now;
+
+        var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+        document.getElementById("days").innerHTML = days + ""
+        document.getElementById("hours").innerHTML = hours + ""
+        document.getElementById("mins").innerHTML = minutes + ""
+        document.getElementById("secs").innerHTML = seconds + ""
+        if (timeleft < 0) {
+            clearInterval(myfunc);
+            document.getElementById("days").innerHTML = ""
+            document.getElementById("hours").innerHTML = ""
+            document.getElementById("mins").innerHTML = ""
+            document.getElementById("secs").innerHTML = ""
+            document.getElementById("end").innerHTML = "ยินดีต้อนรับ";
+        }
+    </script>
+    <!-- <script>
+            (function () {
+                const second = 1000,
+                    minute = second * 60,
+                    hour = minute * 60,
+                    day = hour * 24;
+
+                //I'm adding this section so I don't have to keep updating this pen every year :-)
+                //remove this if you don't need it
+                let today = new Date(),
+                    dd = String(today.getDate()).padStart(2, "0"),
+                    mm = String(today.getMonth() + 1).padStart(2, "0"),
+                    yyyy = today.getFullYear(),
+                    nextYear = yyyy + 1,
+                    dayMonth = "05/02/",
+                    birthday = dayMonth + yyyy;
+
+                today = mm + "/" + dd + "/" + yyyy;
+                if (today > birthday) {
+                    birthday = dayMonth + nextYear;
+                }
+                //end
+
+                const countDown = new Date(birthday).getTime(),
+                    x = setInterval(function () {
+
+                        const now = new Date().getTime(),
+                            distance = countDown - now;
+
+                        document.getElementById("days").innerText = Math.floor(distance / (day)),
+                            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                            document.getElementById("mins").innerText = Math.floor((distance % (hour)) / (minute)),
+                            document.getElementById("secs").innerText = Math.floor((distance % (minute)) / second);
+
+                        //do something later when date is reached
+                        if (distance < 0) {
+                            document.getElementById("headline").innerText = "Welcome to AladinXpress!";
+                            document.getElementById("countdown").style.display = "none";
+                            document.getElementById("content").style.display = "block";
+                            clearInterval(x);
+                        }
+                        //seconds
+                    }, 0)
+            }());
+    </script> -->
+    <!-- For Show More Package -->
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    <!-- For Show More Package -->
+
+
+    <script>
+
+        var formStarter = document.getElementById("starterForm");
+        var formContactUs = document.getElementById("contactUsForm");
+
+        function handleForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            axios.post('http://app.aladinxpress.com:5001/contactUs/',
+                {
+                    name: name, email: email, subject: subject, message: message
+                }, {
+                withCredentials: true,
+            })
+                .then(response => {
+                    alert('เราได้รับข้อมูลติดต่อเรียบร้อยแล้ว เจ้าหน้าที่จะติดต่อหาท่านโดยเร็วที่สุด');
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert('ไม่สามารถส่งข้อความได้ โปรดลองอีกครั้ง!');
+                });
+        }
+        formContactUs.addEventListener('submit', handleForm);
+
+        function starter(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const tel = document.getElementById('tel').value;
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+            localStorage.setItem("tel", tel);
+            localStorage.setItem("package", "M");
+            window.location.href = "auth-signup.html";
+        }
+        // formStarter.addEventListener('submit', starter);
+
+        //set package
+        // document.getElementById("package-free").addEventListener("click", function (event) {
+        //     storePackage("Free");
+        //     event.preventDefault();
+        // });
+
+        // document.getElementById("package-s").addEventListener("click", function (event) {
+        //     storePackage("S");
+        //     event.preventDefault();
+        // });
+
+        // document.getElementById("package-m").addEventListener("click", function (event) {
+        //     storePackage("M");
+        //     event.preventDefault();
+        // });
+        // document.getElementById("package-l").addEventListener("click", function (event) {
+        //     storePackage("L");
+        //     event.preventDefault();
+        // });
+
+        // document.getElementById("package-xl").addEventListener("click", function (event) {
+        //     storePackage("XL");
+        //     event.preventDefault();
+        // });
+        // function storePackage(package) {
+
+        //     // Store the selected package in local storage
+        //     localStorage.setItem("package", package);
+
+        //     // Redirect to register page
+        //     window.location.href = "auth-signup.html";
+        // }
+    </script>
+</body>
+
+<style scoped>
+    .social {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .nav-colour {
+        background-color: #c50000;
+        padding: 10px 0 10px 0;
+    }
+
+    #btn_xxl {
+        /* width: 300px; */
+        font-size: 42px;
+        border-radius: 12px !important;
+    }
+
+    #btn_login {
+        padding: 10px 10px;
+        width: 100px;
+        border-radius: 4px;
+
+    }
+</style>
+
+</html>

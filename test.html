@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <ul class="ulcd">
+            <li class="li shadow-md"><span id="days"></span>วัน</li>
+            <li class="li shadow-md"><span id="hours"></span>ชั่วโมง</li>
+            <li class="li shadow-md"><span id="mins"></span>นาที</li>
+            <li class="li shadow-md"><span id="secs"></span>วินาที</li>
+        </ul>
+    
+    <!-- <script>
+var countDownDate = new Date("2023-05-02T09:39:00").getTime();
+var myfunc = setInterval(function() {
+// code goes here
+}, 1000)
+var now = new Date().getTime();
+var timeleft = countDownDate - now;
+    
+var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+document.getElementById("days").innerHTML = days + "d "
+document.getElementById("hours").innerHTML = hours + "h " 
+document.getElementById("mins").innerHTML = minutes + "m " 
+document.getElementById("secs").innerHTML = seconds + "s"
+if (timeleft < 0) {
+    clearInterval(myfunc);
+    document.getElementById("days").innerHTML = ""
+    document.getElementById("hours").innerHTML = "" 
+    document.getElementById("mins").innerHTML = ""
+    document.getElementById("secs").innerHTML = ""
+    document.getElementById("end").innerHTML = "TIME UP!!";
+}
+    </script> -->
+    <script>
+        (function () {
+            const second = 1000,
+                minute = second * 60,
+                hour = minute * 60,
+                day = hour * 24;
+            let today = new Date(),
+                dd = String(today.getDate()).padStart(2, "0"),
+                mm = String(today.getMonth() + 1).padStart(2, "0"),
+                yyyy = today.getFullYear(),
+                nextYear = yyyy + 1,
+                dayMonth = "05/02/",
+                birthday = dayMonth + yyyy;
+
+            today = mm + "/" + dd + "/" + yyyy;
+            if (today > birthday) {
+                birthday = dayMonth + nextYear;
+            }
+            //end
+
+            const countDown = new Date(birthday).getTime(),
+                x = setInterval(function () {
+
+                    const now = new Date().getTime(),
+                        distance = now - countDown;
+
+                    document.getElementById("days").innerText = Math.floor(distance / (day)),
+                        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                        document.getElementById("mins").innerText = Math.floor((distance % (hour)) / (minute)),
+                        document.getElementById("secs").innerText = Math.floor((distance % (minute)) / second);
+
+                    //do something later when date is reached
+                    if (distance < 0) {
+                        document.getElementById("headline").innerText = "Welcome to AladinXpress!";
+                        document.getElementById("countdown").style.display = "none";
+                        document.getElementById("content").style.display = "block";
+                        clearInterval(x);
+                    }
+                    //seconds
+                }, 0)
+        }());
+</script>
+</body>
+</html>
